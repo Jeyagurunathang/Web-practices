@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+/* font-family: 'Roboto', sans-serif;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ */
+ *{
+    margin: 0;
+    padding: 0;
+ }
+ body{
+    font-family: 'Roboto', sans-serif;
+ }
+.main{
+    width: 100vw;
+    height: 100vh;
+    background: -webkit-linear-gradient(#FF9EAA, #EE6FEB);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 330px;
+    height: 600px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 9px 19px;
+    opacity: 0.9;
+    transition: transform 0.9s ease-in-out;
+}
+.card:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+.bg_img{
+    width: 330px;
+    height: 165px;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.9s ease-in-out;
+}
+.bg_img img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.profile_img{
+    width: 80px;
+    height: 90px;
+    margin: 0 auto;
+    transition: transform 0.9s ease-in-out;
+}
+.profile_img img{
+    width: 100%;
+    border-radius: 90px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 20px;
+}
+.profile_img:hover{
+    transform: scale(1.5);
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    font-size: 25px;
+    font-weight: bold;
+    color: #41403F;
+}
+.desc{
+    margin: 12px;
+    font-size: 13px;
+    color: #969A9E;
+}
+.numbers{
+    font-weight: bold;
+    margin: 12px;
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+.followers{
+    font-weight: bold;
+    margin: 12px;
+    color: #969A9E;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.follow{
+    background-color: #FFD01A;
+    width: 250px;
+    text-align: center;
+    font-weight: bold;
+    margin: 12px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: transform 0.9s ease-in-out;
+    opacity: 0.8;
+}
+.follow:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+p{
+    margin: 12px 30px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    color: #969A9E;
+}

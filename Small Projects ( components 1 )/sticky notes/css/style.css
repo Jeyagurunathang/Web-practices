@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+/* 
+    font-family: 'Poppins', sans-serif;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: #f1f2f6;
+    background-color: #feca57;
+    background-color: #1dd1a1;
+    color: #e17055;
+    color: #576574;
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f2f6;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+ul li{
+    background-color: pink;
+    list-style-type: none;
+    width: 150px;
+    height: 150px;
+    margin: 12px;
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 5px;
+    transform: rotate(-8deg);
+    transition: transform 0.2s linear;
+    background-color: #1dd1a1;
+    position: relative;
+}
+
+ul li:nth-child(2n){
+    background-size: cover;
+    transform: rotate(6deg);
+    position: relative;
+    left: 5px;
+    top: 15px;
+    background-color: #feca57;
+}
+
+ul li:nth-child(1){
+    transform: rotate(15deg);
+}
+
+ul li:nth-child(8){
+    transform: rotate(15deg);
+}
+
+ul li:hover, ul li:focus{
+    transform: scale(1.25);
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+ul li h1{
+    color: #e17055;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+ul li p{
+    font-size: 15px;
+    color: #576574;
+    font-weight: 500;
+}

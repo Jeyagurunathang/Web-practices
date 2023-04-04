@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;500&display=swap');
+/* 
+    font-family: 'Lobster', cursive;
+    font-family: 'Poppins', sans-serif;
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+#home{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/workspace-gcffc37d84_1920.jpg);
+    background-size: cover;
+}
+
+#service{
+    padding-top: 70px;
+    background-color: aliceblue;
+}
+
+#price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    background-color: #2980b9;
+}
+
+#contact{
+    padding-top: 70px;
+    background-color: #c0392b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    background-color: #34495e;
+    z-index: 99;
+}
+
+#home h2{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+#home ul li{
+    display: inline;
+    list-style-type: none;
+}
+
+#home ul li a{
+    text-decoration: none;
+    margin: 0px 20px;
+    color: white;
+    font-size: 20px;
+    position: relative;
+}
+
+#home ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 1px;
+    height: 3px;
+    opacity: 0;
+    background-color: red;
+    transition: 0.5s ease;
+}
+
+#home ul li a:hover::before{
+    width: 100%;
+    opacity: 1;
+}
+
+#home #input{
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.pin{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #a74337;
+    position: absolute;
+    top: 4px;
+    left: 120px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.content{
+    height: calc(100% - 70px);
+    position: relative;
+    top: 70px;
+    left: 20%;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    align-items: center;
+    padding: 10px;
+    gap: 150px;
+}
+
+.content .para{
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    font-size: 17px;
+}
+
+.content .para span{
+    color: orangered;
+}
+
+.content .para p{
+    margin-top: 10px;
+}
+
+.content .login{
+    min-height: 250px;
+    width: 350px;
+    padding: 30px;
+}
+
+.content .login .form-group label{
+    color: white;
+    font-weight: 700;
+}
+
+.content .login .form-group input{
+    display: block;
+    margin: 20px 0px;
+    height: 30px;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    font-size: 17px;
+}
+
+.content .login .remember{
+    margin: 10px 0px;
+}
+
+.content .login .remember label{
+    font-weight: 600;
+    color: whitesmoke;
+    margin-top: 20px;
+}
+
+.content .login button{
+    background-color: red;
+    border: none;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 19px;
+    font-weight: 700;
+    position: relative;
+    left: 37.5px;
+    margin-top: 20px;
+}
+
+.content .login a{
+    color: white;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#service h2{
+    text-align: center;
+    font-size: 25px;
+}
+
+.box-holder{
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.box-holder .box{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    margin-left: 20px;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    position: relative;
+    transition: transform 0.7s ease;
+}
+
+.box-holder .box:hover{
+    transform: scale(1.2);
+    z-index: 99;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    cursor: pointer;
+}
+
+.box-holder .box img{
+    position: relative;
+    margin: 25px 0px;
+    z-index: 1;
+}
+
+.box-holder .box h4{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.box-holder .box p{
+    font-size: 13px;
+    color: #bdc3c7;
+    font-weight: 500;
+}
+
+.box-holder .box .circle{
+    width: 55px;
+    height: 55px;
+    background-color: rgba(22, 24, 109, 0.164);
+    position: absolute;
+    top: 22px;
+    left: 32px;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.box-holder .box .b2{
+    background-color: rgba(231, 181, 57, 0.164);
+}
+
+.box-holder .box .b3{
+    background-color: rgba(59, 74, 210, 0.164);
+}
+
+.box-holder .box .b4{
+    background-color: rgba(50, 148, 32, 0.164);
+}
+
+.box-holder .box .b5{
+    background-color: rgba(175, 77, 119, 0.164);
+}
+
+#price .price-box{
+    min-width: 900px;
+    height: 550px;
+    background-color: #f5f5f5;
+    border: 1px solid black;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 15px;
+    position: relative;
+}
+
+#price .price-box .price-content{
+    width: 400px;
+    height: 450px;
+    padding: 20px;
+}
+
+#price .price-box .price-holder{
+    min-width: 400px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+#price .price-box .price-holder .border{
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(45deg,#F1ADB9, #151152);
+    border-radius: 10px 10px 0px 0px;
+}
+
+#price .price-box .price-holder .awesome,
+#price .price-box .price-holder .pro{
+    width: 250px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+#price .price-box .price-content img{
+    width: 45px;
+    height: 45px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 40px;
+}
+
+#price .price-box .price-content h4{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 30px 0px;
+    line-height: 35px;  
+}
+
+#price .price-box .price-content .price-para{
+    font-size: 20px;
+    font-weight: 400;
+    color: #bdc3c7;
+    margin-bottom: 30px;
+}
+
+#price .price-box .price-content .offer{
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+#price .price-box .price-content a{
+    text-decoration: none;
+    color: blue;
+}
+
+#price .price-box .price-holder .awesome,
+#price .price-box .price-holder .pro{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#price .price-box .price-holder .awesome h5,
+#price .price-box .price-holder .pro h5{
+    color: #BFBFBF;
+    font-size: 40px;
+    font-weight: normal;
+    margin: 25px 0px;
+}
+
+#price .price-box .price-holder .awesome .amount,
+#price .price-box .price-holder .pro .amount{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#price .price-box .price-holder .awesome .limit,
+#price .price-box .price-holder .pro .limit{
+    color:#BFBFBF;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#price .price-box .price-holder .awesome .usd-bill,
+#price .price-box .price-holder .pro .usd-bill{
+    color:#2980b9;
+    font-size: 14px;
+}
+
+#price .price-box .price-holder .awesome ul,
+#price .price-box .price-holder .pro ul{
+    min-width: 200px;
+    min-height: 150px;
+    padding: 25px;
+    text-align: center;
+}
+
+#price .price-box .price-holder .awesome ul li,
+#price .price-box .price-holder .pro ul li{
+    list-style-type: none;
+    margin-bottom: 15px;
+    color: #BFBFBF;
+}
+
+#price .price-box .price-holder .awesome ul li a,
+#price .price-box .price-holder .pro ul li a{
+    text-decoration: none;
+    color: #BFBFBF;
+}
+
+#price .price-box .price-holder .awesome .btn-awesome,
+#price .price-box .price-holder .pro .btn-pro{
+    width: 160px;
+    height: 60px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 40px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #50498D;
+    color: white;
+    position: absolute;
+    top: 460px;
+    transition: transform 0.5s ease-in-out;
+}
+
+#price .price-box .price-holder .awesome .btn-awesome:hover,
+#price .price-box .price-holder .pro .btn-pro:hover{
+    transform: scale(1.2);
+}
+
+#price .price-box .price-holder .pro .btn-pro-color{
+    background-color: #4A8B61;
+}
+
+#contact .contact-box{
+    width: 500px;
+    min-height: 400px;
+    background-color: #b33628;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.50) 0px 6px 12px -2px, rgba(0, 0, 0, 0.5) 0px 3px 7px -3px;
+}
+
+#contact .contact-box h2{
+    font-size: 24px;
+    text-transform: capitalize;
+    color: white;
+}
+
+#contact .contact-box table{
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+}
+
+#contact .contact-box table td{
+    padding: 10px 20px;
+}
+
+#contact .contact-box table td input{
+    width: 100%;
+    height: 30px;
+    padding: 3px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    background-color: #d4d4d4;
+    font-size: 14px;
+}
+
+.txtarea td label,
+.txtarea td textarea{
+    display: block;
+}
+
+.txtarea td textarea{
+    width: 100%;
+    height: 150px;
+    resize: none;
+    margin-top: 10px;
+    padding: 3px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    background-color: #bbbbbb;
+}
+
+#contact .contact-box table td .con-btn{
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
