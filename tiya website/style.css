@@ -1,0 +1,133 @@
+.background {
+    background-color: #16234A;
+}
+
+.yellow-background {
+    background-color: #f8d69e;
+}
+
+.yellow-background:hover {
+    background-color: #F2CC8E;
+}
+
+.yellow-text {
+    color: #f8d69e;
+}
+
+#main {
+    height: 90vh;
+    background-image: url('./images/house1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+#overlay {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg,rgba(54,76,97,0.7) 26%, rgba(105,107,108,0.2) 80%);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+#content {
+    position: absolute;
+    z-index: 4;
+}
+
+#main-wave-1 {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+
+#main-wave-2 {
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+}
+
+#about {
+    background-color: white;
+}
+
+#card {
+    height: 37vh;
+}
+
+.w-45 {
+    width: 45%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+/* newsletter background-image */
+#newsletter {
+    height: 90vh;
+    background-image: url('./images/new.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+#newsletter-card {
+    background-color: rgba(255, 255, 255, 0.575);
+    backdrop-filter: blur(5px) brightness(96%);
+    margin-top: 90px;
+}
+
+#wave-news{
+    position: absolute;
+    top: 0;
+}
+
+#member {
+    position: relative;
+}
+
+#wave-3 {
+    position: absolute;
+    bottom: 0;
+}
+
+tbody > tr:nth-child(even) {
+    background-color: #F4F1DE;
+}
+
+#events {
+    background-color: #F4F1DE;
+}
+
+#event-date {
+    background-color: #81B19A;
+}
+
+#second-event {
+    background-color: white;
+}
+
+#map {
+    position: relative;
+}
+
+#country-details {
+    position: absolute;
+    top: 50px;
+    left: 30%;
+}
+
+
+#contact {
+    position: relative;
+}
+
+#contact-wave-1 {
+    position: absolute;
+    bottom: 0;
+}
