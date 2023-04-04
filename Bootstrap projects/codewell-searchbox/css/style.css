@@ -1,0 +1,13 @@
+#home {
+    text-decoration: none;
+}
+
+#search-bg {
+    background-color: #F9F6F1;
+}
+
+@media (min-width: 762px) {
+    #search {
+        width: 50%;
+    }
+}
