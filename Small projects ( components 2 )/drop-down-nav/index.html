@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop down navbar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo">Gotcha</h2>
+        <label for="check"><ion-icon name="list-outline"></ion-icon></label>
+        <input type="checkbox" id="check">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Courses <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <ul>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">Web development <ion-icon name="chevron-forward-outline"></ion-icon></a>
+                            <ul>
+                                <li><a href="#">HTML</a></li>
+                                <li><a href="#">CSS</a></li>
+                                <li><a href="#">JS</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Game development</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

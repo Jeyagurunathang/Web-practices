@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+a{ text-decoration: none; }
+ul{ list-style-type: none; }
+
+:root{
+    --blue: #2874F0;
+    --white: #fff;
+    --yellow: #FFE500;
+    --black: #000;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: var(--blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    position: relative;
+}
+
+.dummy-space{
+    width: 12%;
+    height: 100%;
+}
+
+.nav-container{
+    width: 78%;
+    height: 100%;
+}
+
+.nav-bar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.nav-bar .logo-search{
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+
+.nav-bar .logo-search .logo{
+    width: 15%;
+    height: 70%;
+    position: relative;
+    top: 13%;
+}
+.nav-bar .logo-search .logo .heading{
+    font-size: 20px;
+    color: var(--white);
+    font-weight: 700;
+    font-style: italic;
+}
+.nav-bar .logo-search .logo .desc,
+.nav-bar .logo-search .logo .desc .icon
+{
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 500;
+}
+.nav-bar .logo-search .logo .desc .plus,
+.nav-bar .logo-search .logo .desc .icon
+{
+    color: var(--yellow);
+}
+.nav-bar .logo-search .logo .desc:hover{
+    text-decoration: underline;
+}
+
+.nav-bar .logo-search .search{
+    width: 83%;
+    position: relative;
+    margin-left: 10px;
+}
+.nav-bar .logo-search .search .input-box{
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    padding-right: 18%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 5px;
+}
+.nav-bar .logo-search .search .search-icon{
+    width: 15%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    border: none;
+    color: var(--blue);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav-bar .log-button{
+    width: 12%;
+    height: 60%;
+    margin-left: 25px;
+    position: relative;
+    top: 20%;
+}
+.nav-bar .log-button .login{
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--blue);
+    border: none;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.nav-bar .menus{
+    width: 35%;
+    height: 100%;
+}
+.nav-bar .menus .lists{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 10px;
+    position: relative;
+}
+
+.nav-bar .menus .lists a{
+    color: var(--white);
+}
+
+.log-button .login-options{
+    position: absolute;
+    width: 200%;
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 5px;
+    top: 50px;
+    left: -50px;
+    color: var(--black);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+.log-button .login-options>li{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #dfe6e9;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+.log-button .login-options li:last-child{
+    margin-bottom: 0px;
+}
+.log-button .login-options li > p,
+.menus .lists .more .more-options li>p
+{
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.log-button .login-options .customer{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+.log-button .login-options .customer p{
+    font-weight: 500;
+}
+.log-button .login-options .customer .signup{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--blue);
+}
+
+.log-button .login-options li > .li-icon,
+.menus .lists .more .more-options li>.more-icons{
+    font-variation-settings:
+    'FILL' 1;
+    font-size: 17px;
+    color: var(--blue);
+}
+
+.log-button .login-options::before,
+.menus .lists .more .more-options::before
+{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: var(--white);
+    position: absolute;
+    top: -7.5px;
+    right: 45%;
+    transform: rotate(45deg);
+}
+
+.nav-bar .login:hover .login-options,
+.nav-bar .login:focus-within .login-options{
+    opacity: 1;
+    pointer-events: all; 
+}
+
+.menus .lists .cart{
+    font-variation-settings:
+    'FILL' 1;
+    color: var(--white);
+    font-size: 20px;
+    position: absolute;
+    top: 32%;
+    right: 18.5%;
+}
+
+.nav-bar .menus .lists .more .down-arrow{
+    position: absolute;
+    right: 30%;
+    top: 38%;
+    font-size: 15px;
+    font-variation-settings:
+    'wght' 400;
+    color: var(--white);
+    transition: 0.1s;
+}
+
+.menus .lists .more .more-options{
+    position: absolute;
+    background-color: var(--white);
+    width: 230px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    top: 100%;
+    left: 30%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+.menus .lists .more .more-options li{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #dfe6e9;
+    cursor: pointer;
+}  
+.menus .lists .more:hover .more-options,
+.menus .lists .more:focus-within .more-options{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.menus .lists .more:hover .down-arrow{
+    transform: rotate(-180deg);
+}

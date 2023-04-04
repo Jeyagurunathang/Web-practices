@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{ text-decoration: none; }
+ul li{ list-style: none; }
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+    background-color: #bdc3c7;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: #130f40;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+    position: fixed;
+}
+
+.logo{
+    font-weight: 500;
+    font-weight: 20px;
+    font-family:cursive;
+    letter-spacing: 1px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-left: 5px;
+    position: relative;
+}
+
+nav ul li:hover > ul,
+nav ul li:focus-within > ul
+{
+    display: block;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px;
+    transition: 0.5s;
+    display: block;
+}
+nav ul li a:hover{
+    background-color: #55efc4;
+}
+
+nav ul li ul{
+    position: absolute;
+    background-color: #7f8c8d;
+    width: 200px;
+    display: none;
+    transition: 0.3s;
+}
+
+nav ul li ul li{
+    width: 100%;
+    margin-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.479);
+}
+
+nav ul li ul li a{
+    color: white;
+}
+
+nav ul li ul li a:hover{
+    background-color: #55efc4;
+}
+
+nav ul li ul li ul{
+    background-color: #7f8c8d;
+    left: 200.2px;
+    top: 20px;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+label{
+    font-size: 25px;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 700px){
+    nav{
+        display: block;
+        position: absolute;
+        width: 100vw;
+        top: 100%;
+        background-color: #130f40;
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: 0.4s;
+    }
+
+    nav ul li{
+        display: block;
+    }
+
+    nav ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    nav ul li ul li ul{
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    nav ul li ul li:hover > ul{
+        background-color: #ffeaa7;
+    }
+    nav ul li ul li:hover > ul li a{
+        color: #2d3436;
+    }
+    
+    label{
+        display: block;
+    }
+
+    #check:checked ~nav{
+        transform: scaleY(1);
+    }
+}

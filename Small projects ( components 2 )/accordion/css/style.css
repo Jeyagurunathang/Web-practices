@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #dcdde1;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-box{
+    width: 40vw;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.outer-box li label{
+    color: white;
+    width: 100%;
+    display: block;
+    background-color: #6D214F;
+    font-weight: 500;
+    font-size: 19px;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.outer-box li:nth-child(2) label{
+    border-radius: 0px;
+}
+.outer-box li:last-child label{
+    border-radius: 0px 0px 10px 10px;
+}
+
+.outer-box li .content{
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    max-height: 0px;
+    overflow: hidden;
+    padding: 0px 20px;
+    transition: 0.65s ease-in-out;
+}
+
+input[type="radio"]{
+    display: none;
+}
+input[type="radio"]:checked ~.content{
+    max-height: 400px;
+    margin: 10px 0px;
+}
+input[type="radio"]:checked ~.last{
+    border-radius: 0px;
+}
+
+ion-icon{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+input[type="radio"]:checked ~label ion-icon{
+    transform: rotate(180deg);
+}

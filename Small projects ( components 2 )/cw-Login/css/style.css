@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/background.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 540px;
+    height: 360px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.37);
+}
+
+.card .img{
+    width: 50%;
+    height: 100%;
+    border-radius: 5px 0px 0px 5px;
+    background-color: #032D3F;
+    color: white;
+    background-image: url(../images/iPhone\ Mockup.png);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.img .desc{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img .desc h1{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.img .desc p{
+    font-size: 10px;
+    color: #7db1c7;
+}
+
+.card .content{
+    width: 50%;
+    height: 100%;
+    border-radius: 0px 5px 5px 0px;
+    padding: 20px 40px;
+}
+
+.content .heading{
+    color: #032D3F;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.content .form-group{
+    width: 100%;
+    min-height: 60px;
+    margin: 10px 0px;
+}
+
+.content .form-group label{
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.content .form-group input{
+    width: 100%;
+    height: 43px;
+    border: 1px solid #EFEFEF;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 2px;
+    font-size: 11px;
+}
+
+.content .form-group input::placeholder{
+    color: darkgrey;
+}
+
+.content .check{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 16px;
+}
+
+.content .check .check-box{
+    position: absolute;
+    top: 2px;
+    border: 1px solid darkgrey;
+}
+
+.content .check .des{
+    font-size: 12px;
+    font-weight: 500;
+    width: 90%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.content .check .des a{
+    color: #032D3F;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-color: #032D3F;
+}
+
+.content .btn{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    background-color: #032D3F;
+    border: none;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 8px;
+}
