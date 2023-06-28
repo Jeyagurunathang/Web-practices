@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+:root {
+  --border-color: rgba(255, 255, 255, 0.3);
+  --glass-color: rgba(255, 255, 255, 0.2);
+  --text-color: #b2bec3; /* c7bca1 */
+  --base-text-color: #f1f2f6;
+  --search-box-color: #2d3436;
+
+  --white-glass: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.3)
+  );
+  --black-glass: linear-gradient(
+    to right bottom,
+    rgba(5, 5, 5, 0.3),
+    rgba(50, 50, 50, 0.1)
+  );
+  --black-glass-2: linear-gradient(
+    to right bottom,
+    rgba(50, 50, 50, 0.7),
+    rgba(80, 80, 80, 0.4)
+  );
+  /* --glassmorphism: linear-gradient(
+    to right bottom,
+    rgba(170, 170, 170, 0.1),
+    rgba(130, 130, 130, 0.2)
+  ); */
+  --glassmorphism: rgba(111, 114, 122, 0.51);
+  --glassmorphism-2: rgba(59, 56, 56, 0.384);
+  --glassmorphism-3: rgba(255, 255, 255, 0.05);
+}
+
+/* Template design */
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('images/background-3.jpg');
+  background-position: center center;
+  object-fit: cover;
+  background-size: 100%;
+
+  position: relative;
+}
+
+.header {
+  width: 102.5em;
+  height: 10em;
+  /* background-color: white; */
+  color: var(--base-text-color);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.climate--data {
+  width: 34em;
+  height: 100%;
+  /* background-color: var(--glass-color); */
+  background: var(--glassmorphism);
+  backdrop-filter: blur(1em) saturate(200%);
+
+  position: absolute;
+  right: 0;
+
+  border-left: 0.2em solid var(--border-color);
+  padding: 2em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Display date */
+.date--details {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  font-size: 2em;
+
+  padding-right: 1em;
+}
+
+.date {
+  font-size: 1.5em;
+  background: var(--glassmorphism-3);
+  backdrop-filter: blur(0.25em);
+  padding: 0.2em 0.4em;
+  border-radius: 0.5em;
+}
+
+/* style the climate data */
+.search--form {
+  width: 100%;
+  height: 6%;
+}
+
+.search--box {
+  width: inherit;
+  height: 100%;
+
+  border-radius: 0.5em;
+  padding: 0.5em;
+
+  background-color: var(--search-box-color);
+  outline: none;
+  border: 0.1em solid var(--border-color);
+
+  color: var(--base-text-color);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.today_weather--detail {
+  width: 100%;
+  height: 30%;
+  /* background-color: red; */
+  color: var(--base-text-color);
+  padding: 1em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  border-bottom: 0.2em solid var(--border-color);
+}
+
+.temperature {
+  font-size: 8em;
+}
+
+.wind--details {
+  margin: 1.5em 0;
+  font-size: 1.5em;
+  color: var(--base-text-color);
+}
+
+/* forecast details style */
+h2 {
+  font-size: 2em;
+  color: var(--base-text-color);
+
+  height: 6%;
+  /* background-color: blue; */
+
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+.forecast--details {
+  width: 100%;
+  height: 64%;
+  /* background-color: red; */
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 2em;
+}
+
+.forecast_weather--details {
+  width: 100%;
+  height: 20%;
+  /* background-color: green; */
+  padding: 1em;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+.forecast_weather--details > .icon {
+  width: 16%;
+  height: 90%;
+  /* background-color: azure; */
+  background: var(--white-glass);
+  border-radius: 0.5em;
+  backdrop-filter: blur(0.2em);
+  margin-right: 0.4em;
+}
+
+.forecast_weather--details > .icon > img {
+  width: 100%;
+  height: 90%;
+}
+
+.yesterday--date {
+  width: 50%;
+  height: 100%;
+  /* padding-left: 0.4em; */
+  padding-right: 1em;
+  border-right: 0.1em solid var(--border-color);
+}
+
+.forecast--date {
+  margin-top: 0.7em;
+  font-size: 1.7em;
+  font-weight: bold;
+  color: var(--base-text-color);
+  font-size: 1.2em;
+}
+.forecast--climate {
+  font-size: 1.1em;
+  margin-top: 1em;
+  color: var(--base-text-color);
+}
+
+.forecast--temperature {
+  height: 100%;
+  line-height: 2.5em;
+  color: var(--base-text-color);
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-left: 0.4em;
+}
+
+/* Hour climate details */
+.climate_data--hour {
+  width: 102.5em;
+  height: 17em;
+  padding: 3em 2em 1em 2em;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: row;
+  gap: 0.9em 3em;
+
+  border-top: 0.2em solid var(--border-color);
+}
+
+.hour_climate--box {
+  width: 7%;
+  height: 100%;
+  background: var(--glassmorphism-2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 0.15em 0em var(--base-text-color);
+  border-radius: 1em;
+  padding: 0.5em 1em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hour,
+.hour--temperature {
+  width: 100%;
+  /* background-color: blue; */
+  margin: 0.2em 0;
+  text-align: center;
+  color: var(--base-text-color);
+}
+
+.hour {
+  border-bottom: 0.1em solid var(--border-color);
+  font-size: 1.3em;
+  padding: 0.4em 0;
+}
+.hour--temperature {
+  border-top: 0.1em solid var(--border-color);
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.4em 0;
+}
+
+.hour_climate--icon {
+  height: 70%;
+  width: 100%;
+  background: var(--white-glass);
+  border-radius: 0.5em;
+  margin: 0.5em 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hour_climate--icon > img {
+  width: 100%;
+  height: 80%;
+}
+
+/* climate detail */
+.climate {
+  position: absolute;
+  right: 26%;
+  bottom: 26%;
+
+  font-size: 6em;
+
+  color: var(--base-text-color);
+}
+
+.font-icon {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-right: 0.5em;
+  color: var(--base-text-color);
+}

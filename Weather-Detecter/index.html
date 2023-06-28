@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Detector</title>
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    /> -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script> -->
+
+    <script
+      defer
+      src="https://kit.fontawesome.com/0d9a118a86.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script defer src="script.js"></script>
+    <!-- <script defer src="script2.js"></script> -->
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="date--details">
+          <!-- <p class="date">25 April 2023</p> -->
+          <!-- <p class="date_time--separator">|</p>
+          <p class="time">11:00</p> -->
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="climate--data">
+        <form class="search--form">
+          <input class="search--box" placeholder="Enter location" />
+        </form>
+
+        <div class="today_weather--detail">
+          <p class="temperature">
+            <!-- <span class="temp_c">11</span><sup>o</sup>C -->
+          </p>
+          <p class="wind--details">
+            <!-- <span class="wind--icon">💨</span> Northwest, 38.9 -->
+          </p>
+        </div>
+
+        <h2>The Next Days Forecast</h2>
+        <div class="forecast--details">
+          <!-- <div class="forecast_weather--details">
+            <div class="icon"></div>
+            <div class="yesterday--date">
+              <p class="forecast--date">Friday, April 21</p>
+              <p class="forecast--climate">Heavy rain</p>
+            </div>
+            <div class="forecast--temperature">
+              <p>9 <sup>o</sup> C</p>
+            </div>
+          </div> -->
+        </div>
+      </aside>
+
+      <!-- Forecast hourly details -->
+      <main class="climate_data--hour">
+        <!-- <div class="hour_climate--box">
+          <p class="hour">9:00</p>
+          <div class="hour_climate--icon"></div>
+          <p class="hour--temperature">9<sup>o</sup>C</p>
+        </div> -->
+      </main>
+      <!-- <img src="" alt="image" class="logo" /> -->
+
+      <h1 class="climate current--climate"></h1>
+    </div>
+  </body>
+</html>
