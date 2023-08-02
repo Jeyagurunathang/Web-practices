@@ -1,0 +1,38 @@
+:root {
+  --color-white: #fff;
+  --color-white-2: #f1f1f1;
+  --color-white-alpha: #eeeeee8a; // black;
+
+  --color-black: #000000b0;
+
+  --symbol-background: #2fc35c;
+
+  --color-black: #333;
+  --color-black-2: #262626;
+
+  --color-grey: #505050;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  font-family: sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: linear-gradient(to right top, #d3f5cf, #a8dbfa, #635ee2);
+}

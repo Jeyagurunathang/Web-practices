@@ -1,0 +1,19 @@
+.theme {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 100px;
+  background-color: var(--color-white);
+  padding: 0.3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  &__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: var(--color-black);
+  }
+}

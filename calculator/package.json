@@ -1,0 +1,14 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Calculator Application",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass main.scss src/style.css -w"
+  },
+  "author": "Jeyagurunathan G",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
