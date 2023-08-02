@@ -1,0 +1,147 @@
+.sidebar {
+  flex: 0 0 15%;
+  height: 60rem;
+  background-color: var(--primary-color--2);
+
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: all 0.5s;
+
+  @include respond(smallest) {
+    position: absolute;
+    left: -15rem;
+    z-index: 3;
+    margin-right: 3rem;
+  }
+
+  &__heading {
+    font-size: 2.5rem;
+    color: var(--color-heading);
+  }
+
+  &__tasks {
+    margin-left: 0.7rem;
+    margin-top: 3rem;
+
+    @include respond(mediumsmall) {
+      margin-left: 0;
+    }
+
+    &--list {
+      list-style: none;
+      margin-top: 2rem;
+      margin-left: 0.7rem;
+
+      @include respond(mediumsmall) {
+        margin-left: 0;
+      }
+    }
+
+    &--item {
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      position: relative;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background-color: var(--secondary-color--dark);
+        border-radius: 0.5rem;
+
+        transform: scaleY(0);
+        transition: transform 0.1s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.1s;
+      }
+
+      &:hover::before {
+        // background-color: var(--secondary-color--dark);
+        transform: scaleY(1);
+        width: 100%;
+      }
+
+      // &:active::before {
+      //   background-color: var(--color-black-4);
+      // }
+
+      &-1::before {
+        background-color: var(--dark-red);
+      }
+
+      &-2::before {
+        background-color: var(--medium-priority);
+      }
+
+      &-3::before {
+        background-color: var(--low-priority);
+      }
+    }
+
+    &--item-active {
+      background-color: var(--secondary-color--dark);
+    }
+
+    &--link:link,
+    &--link:visited {
+      display: flex;
+      align-items: center;
+
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: var(--color-black);
+
+      position: relative;
+      z-index: 3;
+    }
+
+    &--icon {
+      width: 1.5rem;
+      height: 1.5rem;
+
+      margin-right: 0.8rem;
+      fill: currentColor;
+    }
+  }
+
+  &__tags {
+    margin-left: 0.7rem;
+    margin-top: 3rem;
+  }
+
+  &__theme {
+    padding: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: all 0.6s;
+
+    &:hover {
+      transform: rotate(180deg);
+    }
+
+    &--icon {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+.move {
+  left: 0;
+}

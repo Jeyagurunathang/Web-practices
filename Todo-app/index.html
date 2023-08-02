@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do it! Todo it!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style/style.css" />
+
+    <script defer src="script/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar">
+        <div class="sidebar__menu">
+          <h3 class="sidebar__heading">Menu</h3>
+
+          <div class="sidebar__tasks">
+            <h3 class="heading__teriary">Tasks</h3>
+
+            <ul class="sidebar__tasks--list">
+              <!-- Today tasks -->
+              <li class="sidebar__tasks--item sidebar__tasks--item-active">
+                <a href="#" class="sidebar__tasks--link" data-app="todo">
+                  <svg class="sidebar__tasks--icon">
+                    <use xlink:href="img/sprite.svg#icon-list"></use>
+                  </svg>
+                  <span>Today</span>
+                </a>
+              </li>
+            </ul>
+
+            <!-- Tags -->
+            <div class="sidebar__tags">
+              <h3 class="heading__teriary">Priority</h3>
+              <ul class="sidebar__tasks--list tags--list">
+                <!-- High priority -->
+                <li class="sidebar__tasks--item sidebar__tasks--item-1">
+                  <a href="#" class="sidebar__tasks--link" data-priority="High">
+                    High
+                  </a>
+                </li>
+
+                <!-- Medium priority -->
+                <li class="sidebar__tasks--item sidebar__tasks--item-2">
+                  <a
+                    href="#"
+                    class="sidebar__tasks--link"
+                    data-priority="Medium"
+                  >
+                    Medium
+                  </a>
+                </li>
+
+                <!-- Low priority -->
+                <li class="sidebar__tasks--item sidebar__tasks--item-3">
+                  <a href="#" class="sidebar__tasks--link" data-priority="Low">
+                    Low
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar__theme" data-theme="white">
+          <svg class="sidebar__theme--icon">
+            <use xlink:href="img/sprite.svg#icon-adjust"></use>
+          </svg>
+        </div>
+      </nav>
+
+      <!-- Main todo container -->
+      <main class="todo">
+        <!-- Navbar closing btn -->
+        <button class="nav_btn">
+          <svg class="nav_btn--icon">
+            <use xlink:href="img/sprite.svg#icon-menu">
+          </svg>
+        </button>
+
+        <!-- Todo heading -->
+        <div class="heading--primary todo__heading">
+          Today
+          <div class="todo__score--bar">
+            <p class="score">
+              <span class="user__score">0 </span>
+              of 155
+            </p>
+            <span class="score__bar">
+              <span class="score__bar--rise"></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Adding task form -->
+        <form class="todo__addtask">
+          <!-- Tasks Priority -->
+          <select class="todo__priority">
+            <option class="todo__priority--option" value="High">High</option>
+            <option class="todo__priority--option" value="Medium">
+              Medium
+            </option>
+            <option class="todo__priority--option" value="Low">Low</option>
+          </select>
+
+          <input
+            type="text"
+            class="todo__input"
+            placeholder="Add New Task"
+            required
+          />
+          <label class="todo__form--label">
+            <svg class="todo__form--icon">
+              <use xlink:href="img/sprite.svg#icon-plus"></use>
+            </svg>
+          </label>
+        </form>
+
+        <!-- tasks container -->
+        <ul class="todo__task">
+          <!-- <li class="todo__task--item" id="345123">
+            <a href="#" class="todo__task--detail">
+              Research content ideas
+
+              <span class="todo__task--priority todo__task--priority--high"
+                >HIGH</span
+              >
+            </a>
+            <span class="todo__task--icon-1" id="345123" data-icon="1">
+              <svg class="todo__task--icon">
+                <use xlink:href="img/sprite.svg#icon-emoji-happy"></use>
+              </svg>
+            </span>
+            <span class="todo__task--icon-2" id="345123" data-icon="2">
+              <svg class="todo__task--icon icon__sad">
+                <use xlink:href="img/sprite.svg#icon-emoji-sad"></use>
+              </svg>
+            </span>
+          </li> -->
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>

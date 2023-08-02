@@ -1,0 +1,39 @@
+// Media query manager
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == mediumlarge) {
+    @media only screen and (max-width: 53.4375em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == med) {
+    @media only screen and (max-width: 46.25em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == mediumsmall) {
+    @media only screen and (max-width: 43.75em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == smallest) {
+    @media only screen and (max-width: 40.625em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == verysmall) {
+    @media only screen and (max-width: 31.25em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == otherthan) {
+    @media only screen and (min-width: 40.625em) {
+      @content;
+    }
+  }
+}

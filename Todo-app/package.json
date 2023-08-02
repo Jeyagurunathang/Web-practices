@@ -1,0 +1,14 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "Todo application",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass main.scss style/style.css -w"
+  },
+  "author": "JeyagurunathanG",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
