@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/style.css" />
+
+    <script type="module" defer src="src/JS/controller.js"></script>
+  </head>
+  <body>
+    <section class="starting__section">
+      <!-- <div class="overlay"></div> -->
+      <h1 class="Game__title">
+        <span class="game">Quiz Game</span>
+      </h1>
+      <form class="Game__details">
+        <select class="Game__category">
+          <option value="15">Video Games</option>
+          <option value="21">Sports</option>
+          <option value="27">Animals</option>
+          <option value="22">Geography</option>
+          <option value="9">General Knowledge</option>
+          <option value="17">Science and Nature</option>
+          <option value="23">History</option>
+          <option value="28">Vehicles</option>
+          <option value="29">comics</option>
+          <option value="31">Anime</option>
+          <option value="18">Computer</option>
+          <option value="11">Film</option>
+          <option value="10">Books</option>
+          <!-- <option value="26">Celebrity</option> -->
+        </select>
+
+        <div class="Game__settings">
+          <select class="Game__type">
+            <option value="multiple">Multiple Choice</option>
+            <option value="boolean">True (or) False</option>
+          </select>
+
+          <select class="Game__difficult">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+
+        <input
+          type="number"
+          max="20"
+          min="5"
+          class="Game__limit"
+          placeholder="Number of questions"
+          required
+        />
+      </form>
+
+      <button class="start__btn">Start Now</button>
+    </section>
+
+    <div class="spinner">
+      <div class="loaders">
+        <div class="load-box"></div>
+        <div class="load-box box-middle"></div>
+        <div class="load-box"></div>
+        <div class="load-box box-middle"></div>
+        <div class="load-box"></div>
+      </div>
+      <p class="loading-text">Loading...</p>
+    </div>
+
+    <main class="main">
+      <div class="main__timer">
+        <p class="timer"></p>
+      </div>
+
+      <div class="question__container">
+        <!-- <p class="question">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates
+          alias asperiores pariatur iste minima deleniti itaque doloribus amet
+          culpa at, consectetur excepturi officia dolorum fuga.
+        </p> -->
+      </div>
+
+      <ul class="main__answers">
+        <!-- <li class="main__answers--item answer--1 active--option">
+          <a href="#" class="main__answers--link"> Lorem, ipsum. </a>
+        </li>
+
+        <li class="main__answers--item answer--2">
+          <a href="#" class="main__answers--link"> Lorem, ipsum. </a>
+        </li>
+
+        <li class="main__answers--item answer--3">
+          <a href="#" class="main__answers--link">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Accusantium, repudiandae.
+          </a>
+        </li>
+
+        <li class="main__answers--item answer--4">
+          <a href="#" class="main__answers--link"> Lorem, ipsum. </a>
+        </li> -->
+      </ul>
+      <button class="next__question">Next</button>
+    </main>
+
+    <div class="final__page">
+      <div class="scorecard">
+        <p class="scorecard__score">5 / 10</p>
+      </div>
+
+      <div class="questionCard">
+        <ul class="questionCard--list">
+          <!--<li class="questionCard--item">
+             <div class="questionCard--questionContainer">
+              <p class="questionCard--question">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
+                incidunt sed, sequi id provident doloremque commodi dolore
+                exercitationem error illo unde recusandae, eius voluptate
+                voluptatum.
+              </p>
+            </div>
+
+            <div class="questionCard__options">
+              <ul class="options__list">
+                <li class="options__item">
+                  <a href="#" class="options__link">Lorem!</a>
+                </li>
+                <li class="options__item">
+                  <a href="#" class="options__link">Lorem!</a>
+                </li>
+
+                <li class="options__item">
+                  <a href="#" class="options__link">Lorem ipsum!</a>
+                </li>
+
+                <li class="options__item">
+                  <a href="#" class="options__link">Lorem!</a>
+                </li>
+                <li class="options__liner"></li>
+              </ul>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+
+      <button class="new__gameBtn">New Game</button>
+    </div>
+
+    <!-- <div class="final__page time__out">
+      <h2 class="heading-2">Time out! Thanks For Playing</h2>
+    </div> -->
+  </body>
+</html>

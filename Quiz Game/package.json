@@ -1,0 +1,14 @@
+{
+  "name": "24-quiz-app",
+  "version": "1.0.0",
+  "description": "Quiz Application",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass main.scss src/style.css -w"
+  },
+  "author": "JeyagurunathanG",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
